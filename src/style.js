@@ -1,6 +1,6 @@
 import {StyleSheet, Dimensions} from 'react-native';
 
-const {height, width} = Dimensions.get('screen');
+const {height, width} = Dimensions.get('window');
 const style = StyleSheet.create({
   screenContainer: {
     width,
@@ -34,6 +34,7 @@ const style = StyleSheet.create({
     borderColor: '#DADADA',
   },
   renderItemWrapper: {
+    marginVertical: 22,
     borderRadius: 10,
     width: width - 40,
     backgroundColor: 'white',
@@ -49,6 +50,7 @@ const style = StyleSheet.create({
   },
   imageItem: {
     width: '100%',
+    aspectRatio: 2 / 1,
   },
   text: {color: 'black'},
   textTitle: {color: 'black', fontSize: 30, fontWeight: '700'},
@@ -58,6 +60,13 @@ const style = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
     padding: 16,
+  },
+  textFacilities: {
+    color: 'black',
+    fontSize: 20,
+    marginLeft: 10,
+    fontWeight: '500',
+    marginRight: 23,
   },
 });
 
