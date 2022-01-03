@@ -160,7 +160,7 @@ export default function Home(props) {
               paddingHorizontal: 20,
               paddingVertical: 30,
             }}>
-            <Text style={{marginTop: 10}}>Sort</Text>
+            <Text style={{marginTop: 10, color: 'black'}}>Sort</Text>
             <View style={{marginLeft: 10}}>
               <TouchableOpacity
                 onPress={() => setSortType(sortType === 'asc' ? null : 'asc')}
@@ -168,7 +168,7 @@ export default function Home(props) {
                   {paddingVertical: 10},
                   sortType === 'asc' && {backgroundColor: 'gray'},
                 ]}>
-                <Text style={sortType === 'asc' && {color: 'white'}}>
+                <Text style={{color: sortType === 'asc' ? 'white' : 'black'}}>
                   name A-Z
                 </Text>
               </TouchableOpacity>
@@ -178,7 +178,7 @@ export default function Home(props) {
                   {paddingVertical: 10},
                   sortType === 'desc' && {backgroundColor: 'gray'},
                 ]}>
-                <Text style={sortType === 'desc' && {color: 'white'}}>
+                <Text style={{color: sortType === 'desc' ? 'white' : 'black'}}>
                   name Z-A
                 </Text>
               </TouchableOpacity>
@@ -188,7 +188,7 @@ export default function Home(props) {
                   {paddingVertical: 10},
                   sortType === 'new' && {backgroundColor: 'gray'},
                 ]}>
-                <Text style={sortType === 'new' && {color: 'white'}}>
+                <Text style={{color: sortType === 'new' ? 'white' : 'black'}}>
                   date newest
                 </Text>
               </TouchableOpacity>
@@ -198,7 +198,7 @@ export default function Home(props) {
                   {paddingVertical: 10},
                   sortType === 'old' && {backgroundColor: 'gray'},
                 ]}>
-                <Text style={sortType === 'old' && {color: 'white'}}>
+                <Text style={{color: sortType === 'old' ? 'white' : 'black'}}>
                   date oldest
                 </Text>
               </TouchableOpacity>
@@ -207,7 +207,7 @@ export default function Home(props) {
                   setVisible(false);
                   onLoad(1);
                 }}>
-                <Text>Apply</Text>
+                <Text style={{color: 'black'}}>Apply</Text>
               </TouchableOpacity>
             </View>
           </View>
