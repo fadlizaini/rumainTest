@@ -7,7 +7,7 @@ import {BED, FLOOR_PLAN, BATHROOM} from '../images';
 export default function DetailScreen(props) {
   const {item} = props.route.params;
   useEffect(() => {
-    console.log(props);
+    // console.log(props);
     props.navigation.setOptions({title: item.name});
   }, []);
   return (

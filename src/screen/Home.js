@@ -28,7 +28,7 @@ export default function Home(props) {
   }, []);
 
   function onLoad(ppage = page) {
-    console.log('ppage', ppage);
+    // console.log('ppage', ppage);
     setRefreshing(true);
     getHome(ppage)
       .then(response => {
@@ -45,17 +45,17 @@ export default function Home(props) {
               ? filteredResponse
               : sortResponse(filteredResponse),
           );
-          console.log(filteredResponse);
+          // console.log(filteredResponse);
         } else {
           const mergeData = data.concat(filteredResponse);
           setData(sortType === null ? mergeData : sortResponse(mergeData));
-          console.log(mergeData);
+          // console.log(mergeData);
         }
       })
 
       .catch(e => {
         setRefreshing(false);
-        console.log('error getHome', e);
+        // console.log('error getHome', e);
         if (ppage === 1) {
           Alert.alert('Error', 'failed to load data');
         } else {
